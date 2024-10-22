@@ -8,7 +8,7 @@ function main() {
     throw new Error("no command line arguments passed");
   }
   const output = handle(input[0]);
-  console.log(output);
+  console.log(JSON.stringify(output));
 }
 
 /*
@@ -21,7 +21,7 @@ function handle(input) {
   const grid = rows.map((row) => row.split(",").map(Number));
 
   // Implement your logic here and return the final output
-  return []; // Placeholder return value
+  return grid;
 }
 
 main();
