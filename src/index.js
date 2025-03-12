@@ -13,7 +13,7 @@ function main() {
 
 /*
  * Use this method to write your solution.
- * Make sure to print out the solution.
+ * Implement your logic here and return the final output
  */
 function handle(input) {
   // Split input to create a 2D grid array
