@@ -1,3 +1,5 @@
+const handle = require('./solution');
+
 /*
  * This is the main entry point for the program. It will parse the input for you.
  * You don't need to change this.
@@ -7,21 +9,12 @@ function main() {
   if (input.length === 0) {
     throw new Error("no command line arguments passed");
   }
-  const output = handle(input[0]);
-  console.log(JSON.stringify(output));
-}
-
-/*
- * Use this method to write your solution.
- * Implement your logic here and return the final output
- */
-function handle(input) {
-  // Split input to create a 2D grid array
-  const rows = input.split(/\s*\|\s*/);
+   // Split input to create a 2D grid array
+  const rows = input[0].split(/\s*\|\s*/);
   const grid = rows.map((row) => row.split(",").map(Number));
 
-  // Implement your logic here and return the final output
-  return grid;
+  const output = handle(grid);
+  console.log(JSON.stringify(output));
 }
 
 main();
